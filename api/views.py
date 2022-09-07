@@ -2,8 +2,9 @@ from django.shortcuts import render
 from rest_framework import viewsets
 from django.contrib.auth.models import User
 
-from .serializers import ProductSerializers, UserSerializers
+from .serializers import ProductSerializers, UserSerializers, OrderSerializers
 from product.models import Product
+from customer.models import Order
 # Create your views here.
 
 # product viewset
@@ -15,3 +16,8 @@ class ProductViewset(viewsets.ModelViewSet):
 class UserViewset(viewsets.ModelViewSet):
     serializer_class = UserSerializers
     queryset = User.objects.all()
+
+# order viewset 
+class OrderViewset(viewsets.ModelViewSet):
+    serializer_class = OrderSerializers
+    queryset = Order.objects.all()

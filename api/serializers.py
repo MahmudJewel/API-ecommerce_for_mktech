@@ -3,18 +3,16 @@ from django.contrib.auth.models import User
 from django.contrib.auth.hashers import make_password
 
 from product.models import Product
+from customer.models import Order
 
 # product serializers
-
-
 class ProductSerializers(serializers.ModelSerializer):
     class Meta:
         model = Product
         fields = '__all__'
 
+
 # user serializers
-
-
 class UserSerializers(serializers.ModelSerializer):
     class Meta:
         model = User
@@ -29,3 +27,9 @@ class UserSerializers(serializers.ModelSerializer):
         new_user.save()
 
         return new_user
+
+# Oreder serializer
+class OrderSerializers(serializers.ModelSerializer):
+    class Meta:
+        model = Order
+        fields = ['product', 'customer', 'qntt'] # '__all__'
