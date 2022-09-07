@@ -35,3 +35,4 @@ class Order(models.Model):
                 return 'Pending'
             else:
                 return self.status
+
