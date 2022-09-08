@@ -46,6 +46,16 @@ class OrderViewset(viewsets.ModelViewSet):
 			self.permission_classes = [IsAdminUser, ]
 		return super(OrderViewset, self).get_permissions()
 
+# users indivisual order list 
+class OrderListView(generics.ListAPIView):
+	serializer_class = OrderSerializers
+	permission_classes = [IsAuthenticated, ]
+
+	def get_queryset(self):
+		user = self.request.user
+		return Order.objects.filter(customer=user)
+
+
 # product search view
 class ProductSearch(generics.ListAPIView):
 	serializer_class = ProductSerializers
