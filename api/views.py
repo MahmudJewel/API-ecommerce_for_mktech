@@ -2,6 +2,7 @@ from django.shortcuts import render
 from rest_framework import viewsets
 from django.contrib.auth.models import User
 from rest_framework.permissions import IsAuthenticated, IsAdminUser, IsAuthenticatedOrReadOnly, AllowAny
+from rest_framework import generics
 
 from .serializers import ProductSerializers, UserSerializers, OrderSerializers
 from product.models import Product
@@ -44,3 +45,15 @@ class OrderViewset(viewsets.ModelViewSet):
 		else:
 			self.permission_classes = [IsAdminUser, ]
 		return super(OrderViewset, self).get_permissions()
+
+# product search view
+class ProductSearch(generics.ListAPIView):
+	serializer_class = ProductSerializers
+
+	def get_queryset(self):
+		search = self.request.query_params.get('search', None)
+		products = Product.objects.all()
+		if search is not None:
+			products = products.filter(name__contains=search)
+		# print(f"Name = {search} and product=> {products}")
+		return products
