@@ -24,7 +24,7 @@ code's functionality
 | *3* | *POST* | ```/jwt/verify/``` | _Verify the validity of a token_|_All users_|
 
 | User API |
-| ------- |
+| ------- | ------- | ----- | ------------- | ------------- |
 | *4* | *POST* | ```/api/auth/``` | _Register new user_|_Allow any_|
 | *5* | *GET* | ```/api/auth/``` | _List all user_|_Adminuser_|
 | *6* | *PUT* | ```/api/auth/id/``` | _Update user_|_Adminuser_|
