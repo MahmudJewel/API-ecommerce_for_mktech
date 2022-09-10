@@ -23,7 +23,7 @@ code's functionality
 | *2* | *POST* | ```/jwt/refresh/``` | _Refresh the access token_|_All users_|
 | *3* | *POST* | ```/jwt/verify/``` | _Verify the validity of a token_|_All users_|
 
-| User API |
+### User API 
 | ------- | ------- | ----- | ------------- | ------------- |
 | *4* | *POST* | ```/api/auth/``` | _Register new user_|_Allow any_|
 | *5* | *GET* | ```/api/auth/``` | _List all user_|_Adminuser_|
