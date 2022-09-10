@@ -17,7 +17,7 @@ code's functionality
 * Provide necessary documentation.
 
 # Developed API
-| ‘#’ | METHOD | ROUTE | FUNCTIONALITY |ACCESS|
+| METHOD | ROUTE | FUNCTIONALITY |ACCESS|
 | ------- | ----- | ------------- | ------------- |
 | *POST* | ```/jwt/create/``` | _Login user_| _All users_|
 | *POST* | ```/jwt/refresh/``` | _Refresh the access token_|_All users_|
@@ -26,7 +26,7 @@ code's functionality
 | *GET* | ```/api/list/``` | _List all urls_|_Adminuser_|
 
 
-| # | METHOD | ROUTE | FUNCTIONALITY |ACCESS|
+| SRL | METHOD | ROUTE | FUNCTIONALITY |ACCESS|
 | ------- | | ------- | ----- | ------------- | ------------- |
 | *1* | *POST* | ```/jwt/create/``` | _Login user_| _All users_|
 | *2* | *POST* | ```/jwt/refresh/``` | _Refresh the access token_|_All users_|
