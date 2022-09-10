@@ -17,25 +17,30 @@ code's functionality
 * Provide necessary documentation.
 
 # Developed API
+### Login & verify user
 | SRL | METHOD | ROUTE | FUNCTIONALITY |ACCESS|
 | ------- | ------- | ----- | ------------- | ------------- |
 | *1* | *POST* | ```/jwt/create/``` | _Login user_| _All users_|
 | *2* | *POST* | ```/jwt/refresh/``` | _Refresh the access token_|_All users_|
 | *3* | *POST* | ```/jwt/verify/``` | _Verify the validity of a token_|_All users_|
-
 ### User API 
+| SRL | METHOD | ROUTE | FUNCTIONALITY |ACCESS|
 | ------- | ------- | ----- | ------------- | ------------- |
 | *4* | *POST* | ```/api/auth/``` | _Register new user_|_Allow any_|
 | *5* | *GET* | ```/api/auth/``` | _List all user_|_Adminuser_|
 | *6* | *PUT* | ```/api/auth/id/``` | _Update user_|_Adminuser_|
 | *7* | *DELETE* | ```/api/auth/id/``` | _Delete user_|_Adminuser_|
-
+### Product API
+| SRL | METHOD | ROUTE | FUNCTIONALITY |ACCESS|
+| ------- | ------- | ----- | ------------- | ------------- |
 | *8* | *GET* | ```/api/product/``` | _List All product_|_Allow any_|
 | *9* | *PUT* | ```/api/product/``` | _Update product_|_Adminuser_|
 | *10* | *POST* | ```/api/product/``` | _Add new product_|_Adminuser_|
 | *11* | *DELETE* | ```/api/product/id``` | _Delete product_|_Adminuser_|
 | *12* | *GET* | ```/api/search/?search=text``` | _Searched product and view_|_Allow any_|
-
+### Order API
+| SRL | METHOD | ROUTE | FUNCTIONALITY |ACCESS|
+| ------- | ------- | ----- | ------------- | ------------- |
 | *13* | *GET* | ```/api/order/``` | _List all order_|_Adminuser_|
 | *14* | *POST* | ```/api/order/``` | _Create new order_|_All users_|
 | *15* | *PUT* | ```/api/order/id/``` | _Update order/status_|_Adminuser_|
