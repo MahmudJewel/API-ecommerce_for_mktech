@@ -27,7 +27,7 @@ code's functionality
 
 
 | SRL | METHOD | ROUTE | FUNCTIONALITY |ACCESS|
-| ------- | | ------- | ----- | ------------- | ------------- |
+| ------- | ------- | ----- | ------------- | ------------- |
 | *1* | *POST* | ```/jwt/create/``` | _Login user_| _All users_|
 | *2* | *POST* | ```/jwt/refresh/``` | _Refresh the access token_|_All users_|
 | *3* | *POST* | ```/jwt/verify/``` | _Verify the validity of a token_|_All users_|
